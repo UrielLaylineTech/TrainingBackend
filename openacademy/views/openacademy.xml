@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="openacademy_view" model="ir.ui.view">
+        <field name="name">openacademy.course.form</field>
+        <field name="model">openacademy.course</field>
+        <field name="arch" type="xml">
+            <form string="bla bla">
+                <sheet>
+                    <field name="name"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
