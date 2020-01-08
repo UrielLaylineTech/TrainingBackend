@@ -57,12 +57,15 @@ class ResCompany(models.Model):
                 for sub_child in child_node['children']:
                     if sub_child['tag'] == "CURRENCYCODE":
                         currency_code = sub_child['children'][0]
-
+                        #flag if relevant currency
                         add_to_dict = False
 
                         if currency_code in available_currency_names:
                             rate_xml = None
                             add_to_dict = True
+                        #continue to next relevant currency
+                        else:
+                            break
 
                     elif sub_child['tag'] == 'UNIT':
                         currency_xml = sub_child['children'][0]
